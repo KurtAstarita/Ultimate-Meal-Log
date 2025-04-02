@@ -60,4 +60,4 @@ This project is licensed under the MIT License.
 
 ## DISCLAMER
 
-**Read the disclaimer here:** [Workout Log Disclaimer](path/to/workout-log-disclaimer.md)
+**Read the disclaimer here:** [Workout Log Disclaimer](/DISCLAIMER.md)

@@ -45,6 +45,10 @@ This is a simple web application for logging your daily meals. It allows you to:
 * **Blob API:** For creating downloadable JSON files.
 * **URL API:** For creating object URLs for downloaded files.
 
+## DISCLAMER
+
+**Read the disclaimer here:** [Ultimate Meal Log Disclaimer](/DISCLAIMER.md)
+
 ## Installation
 
 1.  Clone the repository to your local machine.
@@ -58,6 +62,10 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 This project is licensed under the MIT License.
 
-## DISCLAMER
+## Author
 
-**Read the disclaimer here:** [Ultimate Meal Log Disclaimer](/DISCLAIMER.md)
+* Kurt Astarita
+
+## Embed App
+
+* [How To Embed](https://post40gains.blogspot.com/p/ultimate-shopping-log.html)

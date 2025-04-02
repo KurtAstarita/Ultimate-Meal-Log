@@ -1,0 +1,184 @@
+#meal-log {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  width: 100%;
+  max-width: 100%;
+}
+
+#meal-log h1 {
+  text-align: center;
+}
+
+#meal-log input,
+#meal-log button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+}
+
+#meal-log input {
+  border: 1px solid #ccc;
+}
+
+#meal-log button {
+  background-color: #00A000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#meal-log button:hover {
+  background-color: #006600;
+}
+
+#meal-log .meal-entry {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr 1fr 3fr;
+  gap: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+#meal-log .header {
+  display: none;
+}
+
+#meal-log label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#confirmation-dialog {
+  background: white;
+  border: 1px solid rgb(204, 204, 204);
+  display: none;
+  left: 50%;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+@media (max-width: 600px) {
+  #meal-log .meal-entry {
+    display: block;
+  }
+
+  #meal-log .meal-entry input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  #meal-log .header {
+    display: none;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 5mm;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #print-container,
+  #print-container * {
+    visibility: visible;
+  }
+
+  #print-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    background: white !important;
+  }
+}
+
+.branding-container {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px 0;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+}
+
+.branding-container a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  padding: 8px 15px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.branding-container span {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .branding-container {
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .branding-container a {
+    font-size: 0.9em;
+    padding: 6px 10px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .branding-container span {
+    font-size: 0.9em;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .branding-container {
+    margin-top: 25px;
+    padding: 12px 0;
+  }
+
+  .branding-container a {
+    font-size: 1em;
+    padding: 7px 12px;
+  }
+
+  .branding-container span {
+    font-size: 1em;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  font-size: 0.9em;
+  color: #666;
+}
+
+footer a {
+  text-decoration: none;
+  color: #007bff;
+}

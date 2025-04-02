@@ -24,14 +24,14 @@
 }
 
 #meal-log button {
-  background-color: #00A000;
+  background-color: #0080FF; /* Changed to blue */
   color: white;
   border: none;
   cursor: pointer;
 }
 
 #meal-log button:hover {
-  background-color: #006600;
+  background-color: #0056B3; /* Changed to darker blue */
 }
 
 #meal-log .meal-entry {

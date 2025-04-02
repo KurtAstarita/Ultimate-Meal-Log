@@ -60,4 +60,4 @@ This project is licensed under the MIT License.
 
 ## DISCLAMER
 
-**Read the disclaimer here:** [Workout Log Disclaimer](/DISCLAIMER.md)
+**Read the disclaimer here:** [Ultimate Meal Log Disclaimer](/DISCLAIMER.md)

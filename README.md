@@ -57,3 +57,7 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 ## License
 
 This project is licensed under the MIT License.
+
+## DISCLAMER
+
+**Read the disclaimer here:** [Workout Log Disclaimer](path/to/workout-log-disclaimer.md)

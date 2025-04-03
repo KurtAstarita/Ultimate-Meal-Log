@@ -45,10 +45,6 @@ This is a simple web application for logging your daily meals. It allows you to:
 * **Blob API:** For creating downloadable JSON files.
 * **URL API:** For creating object URLs for downloaded files.
 
-## DISCLAMER
-
-**Read the disclaimer here:** [Ultimate Meal Log Disclaimer](/DISCLAIMER.md)
-
 ## Installation
 
 1.  Clone the repository to your local machine.
@@ -65,6 +61,10 @@ This project is licensed under the MIT License.
 ## Author
 
 * Kurt Astarita
+
+## DISCLAMER
+
+**Read the disclaimer here:** [Ultimate Meal Log Disclaimer](/DISCLAIMER.md)
 
 ## Embed App
 

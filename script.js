@@ -126,36 +126,60 @@ document.getElementById("load-log").addEventListener("click", () => {
 });
 
 document.getElementById("print-pdf").addEventListener("click", () => {
-  const { jsPDF } = window.jspdf;
-  if (!jsPDF) {
-    alert("jsPDF library not loaded. PDF generation is unavailable.");
-    return;
-  }
-  const doc = new jsPDF();
-  try {
-    doc.text("Daily Meal Log", 10, 10);
-    doc.text(`Log Date: ${document.getElementById("meal-date").value || "No Date"}`, 10, 20);
+    const { jsPDF } = window.jspdf;
+    if (!jsPDF) {
+        alert("jsPDF library not loaded. PDF generation is unavailable.");
+        return;
+    }
 
-    let y = 40;
-    doc.setFontSize(12);
+    const doc = new jsPDF();
 
-    document.querySelectorAll(".meal-entry:not(.header)").forEach(meal => {
-      const inputs = meal.querySelectorAll("input");
-      let rowText = "";
-      inputs.forEach(input => {
-        let value = String(input.value || "N/A");
-        rowText += value + " | ";
-      });
-      doc.text(rowText, 10, y);
-      y += 10;
-    });
+    try {
+        doc.text("Daily Meal Log", 10, 10);
+        doc.text(`Log Date: ${document.getElementById("meal-date").value || "No Date"}`, 10, 20);
 
-    doc.save("meal-log.pdf");
-    alert("Meal PDF generated successfully with meal data!");
-  } catch (error) {
-    console.error("PDF generation error:", error);
-    alert("Failed to generate Meal PDF. Please try again.");
-  }
+        let headers = [];
+        let rows = [];
+
+        // Extract headers from the first row (header row)
+        const headerRow = document.querySelector(".meal-entry.header");
+        if (headerRow) {
+            headerRow.querySelectorAll("input").forEach(input => {
+                headers.push(input.placeholder || "Column"); // Use placeholder or "Column"
+            });
+        }
+
+        // Extract data rows
+        document.querySelectorAll(".meal-entry:not(.header)").forEach(meal => {
+            const inputs = meal.querySelectorAll("input");
+            let rowData = [];
+            inputs.forEach(input => {
+                rowData.push(input.value || "N/A");
+            });
+            rows.push(rowData);
+        });
+
+        // Use autoTable to create the table
+        doc.autoTable({
+            head: [headers],
+            body: rows,
+            startY: 30, // Start table below the date
+            styles: {
+                fontSize: 8, // Smaller font size
+                cellPadding: 2, // Reduce cell padding
+            },
+            headStyles: {
+                fontSize: 8,
+                fillColor: [200, 200, 200], // Light gray header
+            },
+        });
+
+        doc.save("meal_log.pdf");
+
+    } catch (error) {
+        console.error("Error generating PDF:", error);
+        alert("An error occurred while generating the PDF.");
+    }
 });
 
 document.getElementById("download-log").addEventListener("click", () => {

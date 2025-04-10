@@ -184,7 +184,7 @@ document.getElementById("print-pdf").addEventListener("click", () => {
 
 document.getElementById("download-log").addEventListener("click", () => {
   const log = localStorage.getItem("mealLog");
-  if (!log) return alert("No meal log to download.");
+  if (!log) return alert("No workout log to download. You must add entries & fill them out, then click 'Save' before you can download!");
 
   const blob = new Blob([log], { type: "application/json" });
   const a = document.createElement("a");

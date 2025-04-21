@@ -1,16 +1,21 @@
-#meal-log {
+/* General Reset (Optional, but Recommended) */
+/* You might include a link to Normalize.css here */
+
+/* Meal Log Styles */
+.meal-log-container {
   box-sizing: border-box;
   font-family: sans-serif;
   width: 100%;
   max-width: 100%;
+  margin-bottom: 2em; /* Add some space below the log */
 }
 
-#meal-log h1 {
+.meal-log-container h1 {
   text-align: center;
 }
 
-#meal-log input,
-#meal-log button {
+.meal-log-container input,
+.meal-log-container button {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -19,22 +24,22 @@
   box-sizing: border-box;
 }
 
-#meal-log input {
+.meal-log-container input {
   border: 1px solid #ccc;
 }
 
-#meal-log button {
+.meal-log-container button {
   background-color: #0080FF; /* Changed to blue */
   color: white;
   border: none;
   cursor: pointer;
 }
 
-#meal-log button:hover {
+.meal-log-container button:hover {
   background-color: #0056B3; /* Changed to darker blue */
 }
 
-#meal-log .meal-entry {
+.meal-log-container .meal-entry {
   display: grid;
   grid-template-columns: 2fr 1fr 3fr 1fr 3fr;
   gap: 5px;
@@ -45,17 +50,17 @@
   border-radius: 5px;
 }
 
-#meal-log .header {
+.meal-log-container .header {
   display: none;
 }
 
-#meal-log label {
+.meal-log-container label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-#confirmation-dialog {
+.meal-log-container #confirmation-dialog {
   background: white;
   border: 1px solid rgb(204, 204, 204);
   display: none;
@@ -68,36 +73,36 @@
 }
 
 @media (max-width: 600px) {
-  #meal-log .meal-entry {
+  .meal-log-container .meal-entry {
     display: block;
   }
 
-  #meal-log .meal-entry input {
+  .meal-log-container .meal-entry input {
     width: 100%;
     margin-bottom: 5px;
   }
 
-  #meal-log .header {
+  .meal-log-container .header {
     display: none;
   }
 }
 
 @media print {
-  @page {
+  .meal-log-container @page {
     size: A4 portrait;
     margin: 5mm;
   }
 
-  body * {
+  .meal-log-container body * {
     visibility: hidden;
   }
 
-  #print-container,
-  #print-container * {
+  .meal-log-container #print-container,
+  .meal-log-container #print-container * {
     visibility: visible;
   }
 
-  #print-container {
+  .meal-log-container #print-container {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
@@ -108,6 +113,7 @@
   }
 }
 
+/* Branding Container Styles */
 .branding-container {
   text-align: center;
   margin-top: 30px;
@@ -170,6 +176,7 @@
   }
 }
 
+/* Footer Styles */
 footer {
   text-align: center;
   padding: 20px;
@@ -183,6 +190,7 @@ footer a {
   color: #007bff;
 }
 
+/* Social Share Styles */
 .social-share {
   margin-top: 2em;
   padding: 1em;

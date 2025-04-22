@@ -1,168 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ultimate Workout Generator - Generate Tons Of Workouts With Over 300 Exercises On Demaned</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meal Log</title>
   <link rel="stylesheet" href="styles.css" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdnjs.cloudflare.com 'sha384-JcnsjUPPylna1s1fvi1u12X5qjY5OL56iySh75FdtrwhO/SWXgMjoVqcKyIIWOLk' 'sha384-vuyrTV5nkscLp1knFvt+FIHfKKzmROBq5reruhMRslauj54mW+l2B8b6szMN6lCL' 'sha384-qJaFLR94cBwplPg5rmD8f0sxHL6Ypdh0d1sbaU8lc3q6J4Poowsb3w+uQ5e0xUnR'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; frame-ancestors 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdnjs.cloudflare.com 'sha384-YOUR-JSPDF-SRI-HASH' 'sha384-YOUR-AUTOTABLE-SRI-HASH' 'sha384-YOUR-DOMPURIFY-SRI-HASH'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; frame-ancestors 'none';">
+
 </head>
 <body>
-  <div class="social-share">
-    <h3>Share This Tool:</h3>
-    <ul>
-      <li>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurtastarita.github.io/post40gains-fitness-tools/ultimate-workout-generator.html"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Share on Facebook">
-          <img src="facebook.png" alt="Facebook">
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://kurtastarita.github.io/post40gains-fitness-tools/ultimate-workout-generator.html&text=Check out this Ultimate Meal Log to easily track your nutrition! #fitness #nutrition"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Share on Twitter">
-          <img src="twitter.png" alt="Twitter">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://kurtastarita.github.io/post40gains-fitness-tools/ultimate-workout-generator.html&title=Ultimate%20Meal%20Log&summary=Effortlessly%20log%20your%20daily%20meals%2C%20track%20calories%2C%20and%20monitor%20your%20nutrition!&source=YOUR_WEBSITE_NAME"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Share on LinkedIn">
-          <img src="linkedin.png" alt="LinkedIn">
-        </a>
-      </li>
-    </ul>
-  </div>
 
-  <div id="workout-tool-container">
-    <p class="warning-text">
-      <strong>Warning:</strong> Only paste workout text from trusted sources. The application performs basic validation, but cannot guarantee complete safety.
-    </p>
-    <br /><br /><br />
-    <div class="arrows step-1">
-      <h2>STEP-1: Adjust your settings below and click Generate.</h2>
-      <div class="arrow-down">↓</div>
-      <div><br /></div>
-      <div><br /></div>
+<div class="social-share-wrapper">
+    <div class="social-share">
+        <h3>Share This Tool:</h3>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurtastarita.github.io/post40gains-fitness-tools/ultimate-meal-log.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Share on Facebook">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/intent/tweet?url=https://kurtastarita.github.io/post40gains-fitness-tools/ultimate-meal-log.html&text=Check out this Ultimate Meal Log to easily track your nutrition! #fitness #nutrition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Share on Twitter">
+                    <img src="twitter.png" alt="Twitter">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://kurtastarita.github.io/post40gains-fitness-tools/ultimate-meal-log.html&title=Ultimate%20Meal%20Log&summary=Effortlessly%20log%20your%20daily%20meals%2C%20track%20calories%2C%20and%20monitor%20your%20nutrition!&source=YOUR_WEBSITE_NAME"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Share on LinkedIn">
+                    <img src="linkedin.png" alt="LinkedIn">
+                </a>
+            </li>
+        </ul>
     </div>
 
-    <div id="workout-planner">
-      <h3>Full-body Workout Planner/Generator (BETA)</h3>
-      <label for="training-split">Training Split:</label>
-      <select id="training-split">
-        <option value="full_body">Full Body</option>
-        <option value="back_biceps">Upper/Mid Back & Biceps</option>
-        <option value="chest_triceps">Chest & Triceps</option>
-        <option value="legs_back">Legs & Lower Back</option>
-        <option value="delts_traps">Delts & Traps (Upper Back)</option>
-        <option value="core_cardio">Core & Cardio</option>
-      </select>
-      <br />
+<div class="meal-log-container">
+  <div id="meal-log">
+    <h1>Daily Meal Log</h1>
 
-      <label for="goal">Goal:</label>
-      <select id="goal">
-        <option value="muscle">Muscle Gain</option>
-        <option value="strength">Strength Gain</option>
-        <option value="endurance">Endurance</option>
-        <option value="fatloss">Fat Loss</option>
-      </select>
-      <p class="note-text">
-        <i>NOTE: Goal only work with Goal Based Workout.</i>
-      </p>
-      <br />
+    <label>Log Date:</label>
+    <input id="meal-date" type="date" />
 
-      <label for="experience">Experience Level:</label>
-      <select id="experience">
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-      </select>
-      <br />
-
-      <label for="modality">Traing Style:</label>
-      <select id="modality">
-        <option value="general">General Fitness</option>
-        <option value="strength_training">Strength Training</option>
-        <option value="powerlifting_5x5">Powerlifting 5x5</option>
-        <option value="hiit">HIIT</option>
-        <option value="circuit">Circuit Training</option>
-        <option value="calisthenics">Calisthenics</option>
-        <option value="hybrid_calisthenics_plus">Hybrid Calisthenics+ (Weighted/Bands/Suspension)</option> <!- ADD THIS LINE -->
-      </select>
-      <br />
-
-      <button id="generate-workout">Generate Workout</button>
-
-      <div id="workout-result"></div>
-      <button id="copy-workout">Copy Workout to Clipboard</button>
-    </div>
-  </div>
-
-  <div class="arrows step-2">
-    <h2>STEP-2: Copy and paste your workout below.</h2>
-    <div class="arrow-down">↓</div>
-    <div><br /></div>
-    <div><br /></div>
-  </div>
-
-  <div id="workout-chart-generator">
-    <h3>Workout Chart Generator</h3>
-
-    <div id="paste-workout">
-      <label>Paste Workout Here:</label>
-      <textarea id="paste-text" name="paste-text" rows="10"></textarea>
-      <p class="warning-text">
-        <strong>Warning:</strong> Only paste workout text from trusted sources. The application performs basic validation, but cannot guarantee complete safety.
-      </p>
-
+    <div id="meal-entries">
+      <div class="meal-entry header">
+        <input readonly="" type="text" value="Meal Name" />
+        <input readonly="" type="text" value="Time" />
+        <input readonly="" type="text" value="Ingredients" />
+        <input readonly="" type="text" value="Calories" />
+        <input readonly="" type="text" value="Notes" />
+      </div>
     </div>
 
-    <button id="download-pdf">Download as PDF</button>
+    <button id="add-meal">Add Meal</button>
+    <button id="remove-meal">Remove Meal</button>
+    <button id="save-log">Save Log</button>
+    <button id="load-log">Load Log</button>
+    <button id="print-pdf">Print as PDF</button>
+    <button id="download-log">Download Log</button>
+    <input accept=".json" id="upload-log" type="file" />
+
+    <div id="confirmation-dialog">
+      <p>Are you sure you want to delete this meal?</p>
+      <button id="confirm-yes">Yes</button>
+      <button id="confirm-no">No</button>
+    </div>
   </div>
+</div>
 
-  <div class="arrows step-3">
-    <h2>STEP-3: Feel free to customize your workout using our database below, then click download as PDF. TIP: Our workout generator can handle up to 9 exercises.</h2>
-    <div class="arrow-down">↓</div>
-    <div><br /></div>
-    <div><br /></div>
-  </div>
+<div class="branding-container">
+  Learn how you can embed our app!
+  <a href="https://post40gains.blogspot.com/p/how-to-embed-our-apps.html" target="_blank">
+    How To Embed
+  </a>
+</div>
 
-
-  <div id="exercise-database-table">
-    <h2>Workout Database</h2>
-    <p>Browse the complete list of exercises in our database. Simply copy any exercise using the buttons below! Just be sure to update your “Estimated Workout Time” manually after adding/subtracting exercises.</p>
-    <table>
-      <thead>
-      <tr>
-        <th>Exercise</th>
-        <th>Muscle Group</th>
-        <th>Sets</th>
-        <th>Reps</th>
-        <th>Rest (seconds)</th>
-        <th>Time per Set (seconds)</th>
-      </tr>
-      </thead>
-      <tbody id="exercise-table-body">
-      </tbody>
-    </table>
-  </div>
-
-
-  <div class="branding-container">
-    Learn how you can embed our app!
-    <a href="https://post40gains.blogspot.com/p/how-to-embed-our-apps.html" target="_blank">
-      How To Embed
-    </a>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha384-JcnsjUPPylna1s1fvi1u12X5qjY5OL56iySh75FdtrwhO/SWXgMjoVqcKyIIWOLk" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js" integrity="sha384-vuyrTV5nkscLp1knFvt+FIHfKKzmROBq5reruhMRslauj54mW+l2B8b6szMN6lCL" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.3/purify.min.js" integrity="sha384-qJaFLR94cBwplPg5rmD8f0sxHL6Ypdh0d1sbaU8lc3q6J4Poowsb3w+uQ5e0xUnR" crossorigin="anonymous"></script>
-  <script src="sanitize.js"></script>
-  <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha384-JcnsjUPPylna1s1fvi1u12X5qjY5OL56iySh75FdtrwhO/SWXgMjoVqcKyIIWOLk" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js" integrity="sha384-vuyrTV5nkscLp1knFvt+FIHfKKzmROBq5reruhMRslauj54mW+l2B8b6szMN6lCL" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.3/purify.min.js" integrity="sha384-qJaFLR94cBwplPg5rmD8f0sxHL6Ypdh0d1sbaU8lc3q6J4Poowsb3w+uQ5e0xUnR" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="script.js"></script>
+</ br>
 </body>
 <footer>
   <p>Social Media icons by <a href="https://www.flaticon.com/"></a>Flaticon.com</p>
